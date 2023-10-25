@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>t-shirt archive</title>
+  </head>
+  <body>
+    <h1 style="text-align: center">
+      // T-SHIRT ARCHIVE //
+      <a href="info.html">
+        <span style="float: left">&#8594;</span>
+      </a>
+      <a href="list.html">
+        <span style="float: right">&#8592;</span>
+      </a>
+    </h1>
+    <!-- <h4 style="text-align: center">
+      TODAY IS
+      <span id="date"></span>
+    </h4> -->
+    <script>
+      n = new Date();
+      y = n.getFullYear() + 125;
+      m = n.getMonth() + 1;
+      d = n.getDate();
+      document.getElementById("date").innerHTML = m + "-" + d + "-" + y;
+    </script>
+    <div>
+      <img
+        class="strong-tilt-move-shake"
+        src="shirts/joshuatree-california.png"
+      />
+    </div>
+    <div>
+      <a target="_blank" href="pages/moab-utah.html">
+        <img class="strong-tilt-move-shake" src="shirts/moab-utah.png" />
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="pages/malmo-sweden.html">
+        <img class="strong-tilt-move-shake" src="shirts/malmo-sweden.png" />
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="pages/maui-hawaii.html">
+        <img class="strong-tilt-move-shake" src="shirts/maui-hawaii.png" />
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="pages/aurora-colorado.html">
+        <img class="strong-tilt-move-shake" src="shirts/aurora-colorado.png" />
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="pages/chania-greece.html">
+        <img class="strong-tilt-move-shake" src="shirts/chania-greece.png" />
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="pages/oceancity-maryland.html">
+        <img
+          class="strong-tilt-move-shake"
+          src="shirts/oceancity-maryland.png"
+        />
+      </a>
+    </div>
+    <div>
+      <a target="_blank" href="pages/washington-dc.html">
+        <img class="strong-tilt-move-shake" src="shirts/washington-dc.png" />
+      </a>
+    </div>
+    <script>
+      var divs = document.getElementsByTagName("div");
+      var winWidth = window.innerWidth;
+      var winHeight = window.innerHeight;
+
+      for (var i = 0; i < divs.length; i++) {
+        var thisDiv = divs[i];
+
+        randomTop = getRandomNumber(0, winHeight - 150);
+        randomLeft = getRandomNumber(0, winWidth - 150);
+
+        thisDiv.style.top = randomTop + "px";
+        thisDiv.style.left = randomLeft + "px";
+      }
+
+      function getRandomNumber(min, max) {
+        return Math.random() * (max - min) + min;
+      }
+    </script>
+    <!-- <script>
+      let ps = document.querySelectorAll("div");
+
+      for (let i = 0; i < ps.length; i++) {
+        ps[i].style.marginLeft = Math.random() * 90 + "vw";
+      }
+    </script> -->
+  </body>
+</html>
